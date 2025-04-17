@@ -1,0 +1,60 @@
+@use '../../v-common.scss';
+
+.v-table-container {
+  overflow-x: auto;
+  margin: 1rem 0;
+  border-radius: 0.25rem;
+  border: 0px solid transparent;
+}
+
+.v-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  border-radius: 0.25rem;
+
+  th,
+  td {
+    padding: 0.75rem;
+  }
+
+  th {
+    font-weight: bold;
+    background-color: var(--v-background);
+  }
+
+  &--bordered th,
+  &--bordered td {
+    padding: 0.75rem;
+    border: 2px solid var(--v-border);
+  }
+
+  &--striped tbody tr {
+    background-color: var(--v-background-mute);
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  th:first-child {
+    border-top-left-radius: 0.25rem;
+  }
+
+  th:last-child {
+    border-top-right-radius: 0.25rem;
+  }
+
+  td:first-child {
+    border-bottom-left-radius: 0.25rem;
+  }
+
+  td:last-child {
+    border-bottom-right-radius: 0.25rem;
+  }
+
+  .selected-row {
+    background-color: #f0f8ff;
+  }
+}
