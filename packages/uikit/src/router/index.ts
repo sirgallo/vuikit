@@ -1,104 +1,87 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-import about from '../views/about.vue'
-import vbuttonview from '../views/v-button-view.vue'
-import vcomposables from '../views/v-composables.vue'
-import vcontainerview from '../views/v-container-view.vue'
-import vflowview from '../views/v-flow-view.vue'
-import vlistview from '../views/v-list-view.vue'
-import vmasterviewv from '../views/v-master-view.vue'
-import vdropdownview from '../views/v-dropdown-view.vue'
-import vnavview from '../views/v-nav-view.vue'
-import vpathview from '../views/v-path-view.vue'
-import vsearchview from '../views/v-search-view.vue'
-import vsidebarview from '../views/v-sidebar-view.vue'
-import vtableview from '../views/v-table-view.vue'
-import vtagview from '../views/v-tag-view.vue'
-import vtitleview from '../views/v-title-view.vue'
-import vtreeview from '../views/v-tree-view.vue'
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'about',
-      component: about,
+      component: () => import('../views/about.vue'),
     },
     {
       path: '/vbutton',
       name: 'vbutton',
-      component: vbuttonview,
+      component: () => import('../views/v-button-view.vue')
     },
     {
       path: '/vcomposables',
       name: 'vcomposables',
-      component: vcomposables,
+      component: () => import('../views/v-composables.vue')
     },
     {
       path: '/vcontainer',
       name: 'vcontainer',
-      component: vcontainerview,
+      component: () => import('../views/v-container-view.vue')
     },
     {
       path: '/vdropdown',
       name: 'vdropdown',
-      component: vdropdownview,
+      component: () => import('../views/v-dropdown-view.vue')
     },
     {
       path: '/vflow',
       name: 'vflow',
-      component: vflowview,
+      component: () => import('../views/v-flow-view.vue')
     },
     {
       path: '/vlist',
       name: 'vlist',
-      component: vlistview,
+      component: () => import('../views/v-list-view.vue')
     },
     {
       path: '/vmasterview',
       name: 'vmasterview',
-      component: vmasterviewv,
+      component: () => import('../views/v-master-view.vue')
     },
     {
       path: '/vnav',
       name: 'vnav',
-      component: vnavview,
+      component: () => import('../views/v-nav-view.vue')
     },
     {
       path: '/vpath',
       name: 'vpath',
-      component: vpathview,
+      component: () => import('../views/v-path-view.vue')
     },
     {
       path: '/vsearch',
       name: 'vsearch',
-      component: vsearchview
+      component: () => import('../views/v-search-view.vue')
     },
     {
       path: '/vsidebar',
       name: 'vsidebar',
-      component: vsidebarview,
+      component: () => import('../views/v-sidebar-view.vue')
     },
     {
       path: '/vtag',
       name: 'vtag',
-      component: vtagview,
+      component: () => import('../views/v-tag-view.vue')
     },
     {
       path: '/vtitle',
       name: 'vtitle',
-      component: vtitleview,
+      component: () => import('../views/v-title-view.vue')
     },
     {
       path: '/vtable',
       name: 'vtable',
-      component: vtableview,
+      component: () => import('../views/v-table-view.vue')
     },
     {
       path: '/vtree',
       name: 'vtree',
-      component: vtreeview,
+      component: () => import('../views/v-tree-view.vue')
     }
   ],
 })
