@@ -60,9 +60,8 @@ const fetchChildren = async (node?: TestData) => {
 }
 
 const treeDetailListItems = ref([
-  { key: 'title: string', content: 'the title text' },
-  { key: 'subTitle?: string', content: 'optional sub title text' },
-  { key: 'border?: boolean', content: 'an optional border for the title' },
+  { key: 'extractId: (node: T) => number', content: 'get an id from a tree node' },
+  { key: 'fetchChildren: (node?: T) => Promise<T[]>', content: 'function to lazy load children' }
 ])
 
 const implementation = ref(
