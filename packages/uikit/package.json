@@ -4,6 +4,7 @@
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "homepage": "https://sirgallo.github.io/vuikit",
   "files": [
     "src/types/global-components.d.ts"
   ],

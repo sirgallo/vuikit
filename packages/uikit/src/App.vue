@@ -24,7 +24,7 @@ const routerLinks = ref<{ path: `/${string}`, label: string }[]>([
 <template>
   <div class="app-container">
     <v-nav
-      :title="{ title: 'graceuikit', subTitle: 'a vue component collection' }"
+      :title="{ title: 'vuikit', subTitle: 'a vue component collection' }"
       :routerLinks="routerLinks"
     >
     </v-nav>

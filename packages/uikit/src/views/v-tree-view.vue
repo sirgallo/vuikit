@@ -1,6 +1,7 @@
 <script setup lang="ts">
-
 import { ref, type Ref } from 'vue';
+
+import type { ListContent } from './types.js'
 
 type TestData = {
   id: number
@@ -57,10 +58,15 @@ const fetchChildren = async (node?: TestData) => {
   if (! node) return testData.value.filter(n => n.parentId == null)
   return testData.value.filter(n => n.parentId === node.id)
 }
-</script>
 
-<template>
-  <v-tree
+const treeDetailListItems = ref([
+  { key: 'title: string', content: 'the title text' },
+  { key: 'subTitle?: string', content: 'optional sub title text' },
+  { key: 'border?: boolean', content: 'an optional border for the title' },
+])
+
+const implementation = ref(
+  `<v-tree
     :extract-id="extractId"
     :fetch-children="fetchChildren"
   >
@@ -69,10 +75,44 @@ const fetchChildren = async (node?: TestData) => {
         {{ data.label }}
       </div>
     </template>
-  </v-tree>
+  </v-tree>`,
+)
+</script>
+
+<template>
+  <v-container orientation="vertical" :border="false">
+    <v-container orientation="vertical" border>
+      <v-title title="vtree" border></v-title>
+      <v-list :items="treeDetailListItems" :extractKeyFn="(item: ListContent) => item.key">
+        <template #content="{ content }">
+          {{ content }}
+        </template>
+      </v-list>
+    </v-container>
+  </v-container>
+  
+  <v-container orientation="vertical">
+    <v-tree
+      :extract-id="extractId"
+      :fetch-children="fetchChildren"
+    >
+      <template #data="{ data }">
+        <div class="test-data-content">
+          {{ data.label }}
+        </div>
+      </template>
+    </v-tree>
+  </v-container>
+
+  <v-container orientation="vertical" border>
+    <v-title title="implementation" border></v-title>
+    <v-input v-model:value="implementation" disabled></v-input>
+  </v-container>
 </template>
 
 <style lang="scss">
+@use './view.scss';
+
 .test-data-content {
   display: flex;
   flex-direction: row;
