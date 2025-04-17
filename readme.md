@@ -38,9 +38,7 @@ app.mount('#app');
 ```ts
 import { 
   VUIKitLoader,
-
   flow,
-
   useDebounce,
   useExponentialBackoff,
   useLocalStorage,
@@ -49,10 +47,6 @@ import {
   usePeriodicDataFetch,
   useResize,
   useScrollLoader,
-
-  VBlur,
-  VFocus,
-
   vbutton,
   vcontainer,
   vdarkmode,
@@ -68,8 +62,7 @@ import {
   vtitle,
   vtext,
   vtable,
-  vtree
-
+  vtree,
   vfade,
   vslidehorizontal,
   vslidevertical
@@ -77,8 +70,3 @@ import {
 ```
 
 with more to come.
-
-
-## todo
-
-- complete testing of components
