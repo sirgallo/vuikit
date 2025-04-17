@@ -57,6 +57,7 @@ import {
   vnav,
   vnotification,
   vpath,
+  vsearch,
   vsidebar,
   vtag,
   vtitle,

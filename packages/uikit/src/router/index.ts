@@ -10,6 +10,7 @@ import vmasterviewv from '../views/v-master-view.vue'
 import vdropdownview from '../views/v-dropdown-view.vue'
 import vnavview from '../views/v-nav-view.vue'
 import vpathview from '../views/v-path-view.vue'
+import vsearchview from '../views/v-search-view.vue'
 import vsidebarview from '../views/v-sidebar-view.vue'
 import vtableview from '../views/v-table-view.vue'
 import vtagview from '../views/v-tag-view.vue'
@@ -68,6 +69,11 @@ const router = createRouter({
       path: '/vpath',
       name: 'vpath',
       component: vpathview,
+    },
+    {
+      path: '/vsearch',
+      name: 'vsearch',
+      component: vsearchview
     },
     {
       path: '/vsidebar',

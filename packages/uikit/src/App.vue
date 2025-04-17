@@ -13,6 +13,7 @@ const routerLinks = ref<{ path: `/${string}`, label: string }[]>([
   { path: '/vmasterview', label: 'vmasterview' },
   { path: '/vnav', label: 'vnav' },
   { path: '/vpath', label: 'vpath' },
+  { path: '/vsearch', label: 'vsearch' },
   { path: '/vsidebar', label: 'vsidebar' },
   { path: '/vtable', label: 'vtable' },
   { path: '/vtag', label: 'vtag' },

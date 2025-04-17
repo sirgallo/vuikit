@@ -7,6 +7,7 @@ import vlist from './components/v-list/v-list.vue'
 import vmasterview from './components/v-master-view/v-master-view.vue'
 import vnav from './components/v-nav/v-nav.vue'
 import vpath from './components/v-path/v-path.vue'
+import vsearch from './components/v-search/v-search.vue'
 import vsidebar from './components/v-sidebar/v-sidebar.vue'
 import vtable from './components/v-table/v-table.vue'
 import vtag from './components/v-tag/v-tag.vue'
@@ -28,6 +29,7 @@ export {
   vmasterview,
   vnav,
   vpath,
+  vsearch,
   vsidebar,
   vtable,
   vtag,

@@ -10,6 +10,7 @@ import VList from '../components/v-list/v-list.vue'
 import VMasterView from '../components/v-master-view/v-master-view.vue'
 import VNav from '../components/v-nav/v-nav.vue'
 import VPath from '../components/v-path/v-path.vue'
+import VSearch from '../components/v-search/v-search.vue'
 import VSidebar from '../components/v-sidebar/v-sidebar.vue'
 import VTable from '../components/v-table/v-table.vue'
 import VTag from '../components/v-tag/v-tag.vue'
@@ -31,6 +32,7 @@ declare module 'vue' {
     VMasterView: typeof VMasterView
     VNav: typeof VNav
     VPath: typeof VPath
+    VSearch: typeof VSearch
     VSidebar: typeof VSidebar
     VTable: typeof VTable
     VTag: typeof VTag
